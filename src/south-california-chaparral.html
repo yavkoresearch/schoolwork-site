@@ -1,6 +1,11 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <title>
+      South California Chaparral
+    </title>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
     <style type="text/css">
       .lst-kix_eduec9cxyllu-8 > li:before {
         content: "\0025a0  ";
@@ -643,7 +648,50 @@
     </style>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dialog-polyfill.css">
+
     <style>
+
+button.closebutton {
+  position: absolute;
+     right: 10px;
+     bottom:10px;
+     color: #ffffff;
+     background-color: #ffffff00;
+     border: 1px solid #ffffff;
+     border-radius: 4px;
+     padding: 0 15px;
+     cursor: pointer;
+     height: 32px;
+     font-size: 14px;
+     transition: all 0.2s ease-in-out;
+}
+button.closebutton:hover {
+  transform: scale(1.1);
+}
+
+      ::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255, 255, 255, 0.4);
+}
+
 * {
     font-family: 'Baloo 2', cursive !important;
     background: #5c6275  !important;
@@ -655,8 +703,37 @@ body {
     margin: auto;
 }
     </style>
+
+<!--pop up  start-->
+<style>
+  dialog.modal {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    height:200px;
+    width:300px;
+
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left: -150px;
+    margin-top:-100px;
+  }
+
+  dialog::backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
+</style>
+<!--Popup end-->
+
   </head>
   <body class="c11">
+
     <p class="c7 c25 title" id="h.gle4muhjej3m">
       <span class="c10 c23">South California Chaparral</span>
     </p>
@@ -962,7 +1039,7 @@ body {
         "
         ><img
           alt=""
-          src="../images/image1.png"
+          src="https://i.imgur.com/dqaP5jA.png"
           style="
             width: 624px;
             height: 468px;
@@ -1023,7 +1100,7 @@ body {
         "
         ><img
           alt=""
-          src="../images/image3.png"
+          src="https://i.imgur.com/vQKxC6S.png"
           style="
             width: 624px;
             height: 468px;
@@ -1063,24 +1140,30 @@ body {
           transform: rotate(0rad) translateZ(0px);
           -webkit-transform: rotate(0rad) translateZ(0px);
           width: 624px;
-          height: 624px;
-        "
-        ><img
-          alt=""
-          src="../images/image2.jpg"
-          style="
-            width: 624px;
-            height: 624px;
-            margin-left: 0px;
-            margin-top: 0px;
-            transform: rotate(0rad) translateZ(0px);
-            -webkit-transform: rotate(0rad) translateZ(0px);
-          "
-          title=""
-      /></span>
+          height: 1073px; /*834px;*/
+        ">
+          <iframe src="../gallery/" style="border:0px #ffffff none;" name="gallery" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+      </span>
     </p>
     <div>
       <p class="c8 c7"><span class="c28"></span></p>
     </div>
+
+   <dialog id="resources" class="modal">
+     Recourses
+     <button class="closebutton" onclick="document.getElementById('resources').close()">Close</button>
+   </dialog>
+   <script src="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dist/dialog-polyfill.js"></script>
+
+   <script>
+    var dialog = document.querySelector('dialog');
+    dialogPolyfill.registerDialog(dialog);
+    // Now dialog always acts like a native <dialog>.
+    dialog.showModal();
+  </script>
+
+   <a href="#resources" style="text-decoration: none;" onclick="document.getElementById('resources').show()">
+    Resources
+  </a>
 </body>
 </html>
