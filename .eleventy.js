@@ -1,9 +1,8 @@
 module.exports = {
   dir: {
-    input: "src",
-    output: "_site"
-  }
+    output: "_site",
+  },
 };
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 };
