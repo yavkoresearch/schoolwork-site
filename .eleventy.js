@@ -5,4 +5,6 @@ module.exports = {
 };
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
+
+    eleventyConfig.addPassthroughCopy("static");
 };
